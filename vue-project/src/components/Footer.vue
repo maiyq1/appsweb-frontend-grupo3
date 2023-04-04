@@ -1,7 +1,7 @@
 <template>
   <footer>
     <p>{{ mail }}</p>
-    <p>{{ telefono }}</p>
+    <p>{{ telefono  }}</p>
   </footer>
 </template>
 
