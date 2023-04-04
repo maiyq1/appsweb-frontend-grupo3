@@ -8,7 +8,7 @@
 
 <script>
 export default {
-    props: ['section'],
+
     name: "navbar"
 }
 </script>
