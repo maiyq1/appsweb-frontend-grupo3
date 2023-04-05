@@ -5,6 +5,7 @@ import HeaderProject from "./components/HeaderProject.vue";
 import navbar from "./components/navbar.vue";
 import Navbar from "./components/navbar.vue";
 import Sidebar from "./components/Sidebar.vue";
+import Article from "./components/Article.vue";
 </script>
 
 <template>
@@ -25,7 +26,9 @@ import Sidebar from "./components/Sidebar.vue";
     <sidebar name = "cotegory "/>
   </aside>
 
-
+  <article>
+    <Article name = "Article"/>
+  </article>
 </template>
 
 <style scoped>
