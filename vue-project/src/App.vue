@@ -4,6 +4,7 @@ import TheWelcome from './components/TheWelcome.vue'
 import HeaderProject from "./components/HeaderProject.vue";
 import navbar from "./components/navbar.vue";
 import Navbar from "./components/navbar.vue";
+import Sidebar from "./components/Sidebar.vue";
 </script>
 
 <template>
@@ -19,6 +20,12 @@ import Navbar from "./components/navbar.vue";
   </header>
   <main>
   </main>
+
+  <aside>
+    <sidebar name = "cotegory "/>
+  </aside>
+
+
 </template>
 
 <style scoped>
