@@ -12,13 +12,25 @@
             <h2>Category 3</h2>
             <p>Descripción de la categoría 3</p>
         </div>
+        <div class="grid-item">
+            <h2>Category 4</h2>
+            <p>Descripción de la categoría 4</p>
+        </div>
     </div>
 </template>
 
-<style>
+<script>
+export default {
+
+    name: "categories"
+}
+</script>
+
+<style scoped>
+
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     grid-gap: 10px;
 }
 
@@ -27,6 +39,7 @@
     padding: 20px;
     text-align: center;
     font-size: 20px;
+    color: red;
 }
 
 .grid-item h2 {
@@ -39,3 +52,4 @@
     margin: 0;
 }
 </style>
+

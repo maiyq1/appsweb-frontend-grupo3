@@ -4,6 +4,8 @@ import TheWelcome from './components/TheWelcome.vue'
 import HeaderProject from "./components/HeaderProject.vue";
 import navbar from "./components/navbar.vue";
 import Navbar from "./components/navbar.vue";
+import categories from "@/components/Categories.vue";
+import Categories from "@/components/Categories.vue";
 </script>
 
 <template>
@@ -18,6 +20,8 @@ import Navbar from "./components/navbar.vue";
       <navbar/>
   </header>
   <main>
+      <categories/>
+
   </main>
 </template>
 
