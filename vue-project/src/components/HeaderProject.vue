@@ -10,7 +10,26 @@
 <script>
 export default {
     props: ['name'],
-    name: "header"
+    name: "header",
+
+    data() {
+        return {title:'title 1'}
+    },
+
+    mounted() {
+        console.log('-----montando componente')
+    },
+
+    updated() {
+        console.log('-----actualizando componente')
+    },
+
+    methods: {
+        handleClick(event) {
+            console.log('-----haciendo click')
+            this.title=' new title'
+        }
+    }
 }
 </script>
 

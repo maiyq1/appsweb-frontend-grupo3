@@ -1,28 +1,27 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-import HeaderProject from "./components/HeaderProject.vue";
-import navbar from "./components/navbar.vue";
-import Navbar from "./components/navbar.vue";
-import categories from "@/components/Categories.vue";
+import Navbar from "@/components/Navbar.vue";
+import Sidebar from "@/components/Sidebar.vue";
+import Footer from "@/components/Footer.vue";
 import Categories from "@/components/Categories.vue";
 </script>
 
 <template>
-  <!-- <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header> -->
-  <header>
-      <navbar/>
-  </header>
-  <main>
-      <categories/>
-
+    <navbar/>
+    <div class="card"><main>
+      <sidebar/>
+      <sidebar/>
+      <sidebar/>
+      <sidebar/>
   </main>
+    </div>
+
+    <div class="categories-grid">
+    <categories/>
+    <categories/>
+    <categories/>
+    <categories/>
+    </div>
+    <Footer/>
 </template>
 
 <style scoped>
@@ -30,9 +29,15 @@ header {
   line-height: 1.5;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.card {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 20px;
 }
 
 @media (min-width: 1024px) {
@@ -41,7 +46,6 @@ header {
     place-items: center;
     padding-right: calc(var(--section-gap) / 2);
   }
-
   .logo {
     margin: 0 2rem 0 0;
   }
