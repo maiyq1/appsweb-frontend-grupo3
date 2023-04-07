@@ -1,22 +1,36 @@
 <template>
+
   <footer>
-    <p>{{ mail }}</p>
-    <p>{{ telefono  }}</p>
+    <p>{{ emailText }}</p>
+    <p>{{ numberText }}</p>
+    <p>{{ addressText }}</p>
   </footer>
+
+
 </template>
 
 <script>
-export default {
-  name: "Footer"
+
+export default{
+  data(){
+    return{
+      emailText:"ventas@library.com",
+      numberText:"986838440",
+      addressText:"Los Manzanos 398"
+
+    }
+  }
 }
+
 </script>
 
 <style scoped>
-footer {
-  background-color: white;
-  display: inline;
-  justify-content: space-between;
+footer{
+  display: flex;
   align-items: center;
+  justify-content: space-evenly;
+  color: #131313;
+
 }
 
 </style>
