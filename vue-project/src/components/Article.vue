@@ -1,36 +1,37 @@
 <template>
 
-  <div class="container">
-    <div class="my-class">My component Header {{name}}</div>
+  <div class="tutorial">{{name}}<hr/>
+    <img src="src/img/imgVideo.png" >
+    <p>{{ description }}</p>
 
   </div>
 
-  <ul>
-    <li> <a href="Menu" >Tutorial 1</a></li>
-    <li> <a href="Menu" >Tutorial 2</a></li>
-    <li> <a href="Menu" >Tutorial 3</a></li>
-    <li> <a href="Menu" >Tutorial 4</a></li>
-  </ul>
-
-
-
 </template>
-
 <script>
-export default {
-  props : ['name'],
-  name: "Header"
-
+export default{
+  props:['name', 'image','description'],
+  name:"Tutorial"
 }
+
 </script>
-
 <style scoped>
-ul li a{border: 1px solid deepskyblue}
+.tutorial{
+  font-size:20px;
+  padding: 1%;
+  border-width: 2px;
+  border-style: solid;
+  justify-content: space-evenly;
+  border-color: #0a0a0a;
+  background-color: rgba(255, 255, 255, 0.75);
+  color: #0a0a0a;
+}
+p{
+  font-size: 20px;
+}
 
-ul{
-  display: flex;
-  list-style-type: none;
-  border: 1px solid red;
-  justify-content: space-between;
+
+img{
+  width: 300px;
+  height: 300px;
 }
 </style>

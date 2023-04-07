@@ -1,61 +1,89 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-import HeaderProject from "./components/HeaderProject.vue";
-import navbar from "./components/navbar.vue";
-import Navbar from "./components/navbar.vue";
-import Sidebar from "./components/Sidebar.vue";
-import Article from "./components/Article.vue";
+import Header from "@/components/Header.vue";
+import Sidebar from "@/components/Sidebar.vue";
+import Article from "@/components/Article.vue";
+import Footer from "@/components/Footer.vue";
+import ListComponent from "@/components/listComponent.vue";
+
+
 </script>
 
 <template>
-  <!-- <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header> -->
-  <header>
-      <navbar/>
-  </header>
   <main>
+    <Header menu="Menu" title="Library UPC" profile="Edit Profile"/>
+    <div class="sideber">
+      <list-component/>
+    </div>
+
+    <div class="Article">
+      <Article class="tutorial " name ="Tutorial 1" image=" "  description="Full description Category"/>
+      <Article class="tutorial " name ="Tutorial 2" image=" "  description="Full description Category"/>
+      <Article class="tutorial " name ="Tutorial 3" image=" "  description="Full description Category"/>
+      <Article class="tutorial " name ="Tutorial 4" image=" "  description="Full description Category"/>
+
+    </div>
+
+    <Footer class= "footer"/>
   </main>
 
-  <aside>
-    <sidebar name = "cotegory "/>
-  </aside>
-
-  <article>
-    <Article name = "Article"/>
-  </article>
 </template>
 
+
+
 <style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
 @media (min-width: 1024px) {
+  main {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 2fr 15fr 1fr;
+  }
+
   header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+    grid-column: span 3;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-color: #0a0a0a;
+    border-width: 2px;
+    border-style: solid;
   }
 
-  .logo {
-    margin: 0 2rem 0 0;
+  .footer {
+    background-color: rgba(255, 255, 255, 0.75);
+    grid-column: span 3;
+    border-color: #0a0a0a;
+    border-width: 2px;
+    border-style: solid;
   }
 
-  header .wrapper {
+  .sideber {
     display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(255, 255, 255);
+    border-right: 1px solid rgba(255, 255, 255, 0.75);
+    padding: 40px;
+    border-color: #0a0a0a;
+    border-width: 2px;
+    border-style: solid;
   }
+
+
+  .Article {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 1fr  1fr;
+    background-color: rgba(255, 255, 255, 0.75);
+    grid-gap: 60px 12px;
+    padding: 40px;
+
+    border-color: #0a0a0a;
+    border-width: 2px;
+    border-style: solid;
+
+  }
+
 }
+
 </style>
+

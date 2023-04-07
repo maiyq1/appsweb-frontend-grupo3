@@ -1,41 +1,32 @@
+
 <template>
-  <div class="container">
-    <div class="my-class">My component Sidebar {{name}}</div>
+
+  <div class="Category">{{ name}}<hr/>
+    <p>{{ description }}</p>
 
   </div>
 
 
-  <ul>
-    <li> <a href="Menu" >Category 1</a></li>
-    <li> <a href="Menu" >Category 2</a></li>
-    <li> <a href="Menu" >Category 3</a></li>
-    <li> <a href="Menu" >Category 4</a></li>
-
-  </ul>
-  v
 </template>
-
 <script>
-export default {
-
-  props : ['name'],
-  name: "Sidebar"
+export default{
+  props:['name','description'],
+  name:"Category"
 
 }
+
 </script>
 
-
-
-
 <style scoped>
-
-ul li a{border: 1px solid deepskyblue}
-
-ul{
-  display: flex;
-  list-style-type: none;
-  border: 1px solid #0099ff;
-  justify-content: space-between;
+.Category{
+  font-size:22px;
+  border-color: #0a0a0a;
+  border-style: solid;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 0.50rem;
+  color: rgb(10, 10, 10);
 }
-
+p{
+  font-size: 20px;
+}
 </style>
