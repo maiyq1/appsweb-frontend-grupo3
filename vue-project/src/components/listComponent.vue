@@ -1,16 +1,21 @@
 <template>
 
+<<<<<<< HEAD
   <div v-for="category in categories">
     <Sidebar :name=category.name :description=category.description   />
+=======
+  <div v-for="category in categories ">
+    <Article :name=category.name  />
+>>>>>>> 943bf7ac672f1eb466a35b35e4682e556e2a9b02
   </div>
 
 </template>
 
 <script>
-import Sidebar from "@/components/Sidebar.vue";
+import Article from "@/components/Sidebar.vue";
 export default {
-  name: "listComponent",
-  components:{Sidebar},
+  name: "listArticle",
+  components:{Article},
   data(){
     return{
       categories:[]
@@ -25,5 +30,4 @@ export default {
 }
 </script>
 <style scoped>
-
 </style>
