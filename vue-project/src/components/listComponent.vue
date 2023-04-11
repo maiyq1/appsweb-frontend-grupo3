@@ -15,7 +15,7 @@ export default {
     return{
       categories:[]
     }},
-  BeforeMount(){
+  beforeMount(){
     //invoco API
     this.categories =[{ name:'Category 1',description:'This section has description of'},
       { name:'Category 2',description:'This section has description of'},
@@ -24,7 +24,5 @@ export default {
   }
 }
 </script>
-
 <style scoped>
-
 </style>
