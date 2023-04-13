@@ -1,4 +1,3 @@
-
 import { createApp } from 'vue'
 import App from './App.vue'
 
@@ -23,9 +22,14 @@ import Textarea from 'primevue/textarea';
 import TriStateCheckbox from 'primevue/tristatecheckbox';
 import ConfirmPopup from 'primevue/confirmpopup';
 import RadioButton from 'primevue/radiobutton';
+import { createI18n } from 'vue-i18n'
+
+import i18n from'../src/locales/i18n'
+
 
 const app = createApp(App);
 
+app.use(i18n);
 app.use(PrimeVue);
 
 app.component('InputMask', InputMask);
